@@ -34,6 +34,7 @@ module SacsRuby
   class ClientRequestError < Error; end
   class TooManyRequestsError < Error; end
   class JsonSchemaError < Error; end
+  class ServerError < Error; end
 
   # Token Authentication Error
   class TokenRequestError < Error

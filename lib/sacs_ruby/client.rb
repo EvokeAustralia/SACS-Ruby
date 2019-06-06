@@ -116,6 +116,9 @@ module SacsRuby
         else
           response.return!(request, result, &block)
         end
+      when 504
+        parsed_response = JSON.load(response)
+        fail ServerError, parsed_response
       else
         response.return!(request, result, &block)
       end
